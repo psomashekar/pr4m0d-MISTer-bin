@@ -14,10 +14,6 @@
     <category>Shoot&apos;em up</category>
     <catver>Shooter / Flying Vertical</catver>
     <mraauthor>pram0d</mraauthor>
-    <platform>Toaplan 2</platform>
-    <category>Shoot&apos;em up</category>
-    <catver>Shooter / Flying Vertical</catver>
-    <mraauthor>pram0d</mraauthor>
     <rom index="0" zip="batrideru.zip|batrider.zip" md5="none" address="0x30000000">
         <!-- maincpu - starts at 0x0 -->
         <interleave output="16">
