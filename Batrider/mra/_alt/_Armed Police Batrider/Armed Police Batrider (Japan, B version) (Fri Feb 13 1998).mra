@@ -46,29 +46,22 @@
         <part>01</part>
     </rom>
     <switches default="00,00,00" base="8">
-        <!-- DSW -->
-        <dip name="Service Mode" bits="0" ids="Off,On"/>
-        <dip name="Credits to Start" bits="1" ids="1,2"/>
-        <dip name="Joystick Mode" bits="1" ids="Normal,90 degrees ACW"/>
-        <dip name="Coin A" bits="2,4" ids="1/1,1/2,1/3,1/4,2/1,3/1,4/1,Free Play"/>
-        <dip name="Hit Score" bits="5" ids="Off,On"/>
-        <dip name="Sound Effect" bits="6" ids="Off,On"/>
-        <dip name="Music" bits="7" ids="Off,On"/>
-        <dip name="Coin B" bits="5,7" ids="1/1,1/2,1/3,1/4,2/1,3/1,4/1"/>
-        <dip name="Difficulty" bits="8,9" ids="Normal,Easy,Hard,Very Hard"/>
-        <dip name="Timer" bits="10,11" ids="Normal,Low,High,Highest"/>
-        <dip name="Lives" bits="12,13" ids="3,4,2,1"/>
-        <dip name="Bonus Life" bits="14,15" ids="Every 1500k,Every 1000k,Every 2000k,None"/>
-        <!-- SYS-DSW -->
-        <dip name="Test Switch" bits="18" ids="Off,On"/>
-        <dip name="Flip Screen" bits="24" ids="Off,On"/>
-        <dip name="Demo Sounds" bits="25" ids="On,Off"/>
-        <dip name="Stage Edit" bits="26" ids="Off,On"/>
-        <dip name="Allow Continue" bits="27" ids="Yes,No"/>
-        <dip name="Invulnerability (Cheat)" bits="28" ids="Off,On"/>
-        <dip name="Guest Players" bits="29" ids="Off,On"/>
-        <dip name="Player Select" bits="30" ids="Off,On"/>
-        <dip name="Special Course" bits="31" ids="Off,On"/>
+        <dip name="Test Mode" bits="0" ids="Normal Play,Test Pattern"/>
+        <dip name="Starting Coin" bits="1" ids="1 Credit,2 Credits"/>
+        <dip bits="2,4" name="Coin 1" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 1 Coin/3 Credits, 1 Coin/4 Credits, 2 Coins/1 Credit, 3 Coins/1 Credit, 4 Coins/1 Credit, Free Play"/>
+        <dip bits="5,7" name="Coin 2" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 1 Coin/3 Credits, 1 Coin/4 Credits, 2 Coins/1 Credit, 3 Coins/1 Credit, 4 Coins/1 Credit, Free Play"/>
+        <dip bits="8,9" name="Start Rank" ids="Normal, Easy, Hard, Very Hard"/>
+        <dip bits="10,11" name="Timer Rank" ids="Normal, Low, High, Highest"/>
+        <dip bits="12,13" name="Player Counts" ids="3, 4, 2, 1"/>
+        <dip bits="14,15" name="Extra Player" ids="1.5mil Each, 1mil Each, 2mil Each, No Extra"/>
+        <dip name="Screen Flip" bits="16" ids="Off,On"/>
+        <dip name="Demo Sound" bits="17" ids="On,No Sound"/>
+        <dip name="Stage Edit" bits="18" ids="Disable,Enable"/>
+        <dip name="Continue Play" bits="19" ids="Enable,Disable"/>
+        <dip name="Invincible" bits="20" ids="Off,On"/>
+        <dip name="Guest Characters" bits="21" ids="Disable,Enable"/>
+        <dip name="Single Character" bits="22" ids="Disable,Enable"/>
+        <dip name="Special Course" bits="23" ids="Disable,Enable"/>
     </switches>
     <buttons names="Shot,Bomb,Formation,Coin,Start" default="Y,A,B,Select,Start" count="3"/>
 </misterromdescription>
