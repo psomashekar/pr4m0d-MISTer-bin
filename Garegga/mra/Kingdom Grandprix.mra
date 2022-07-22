@@ -1,0 +1,59 @@
+<misterromdescription>
+    <about author="pram0d" webpage="https://pram0d.com" source="https://github.com/psomashekar" twitter="@pr4m0d"/>
+    <name>Kingdom Grandprix</name>
+    <setname>kingdmgp</setname>
+    <rbf>garegga</rbf>
+    <mameversion>0229</mameversion>
+    <year>1996</year>
+    <manufacturer>Eighting / Raizing</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>vertical</rotation>
+    <region>Europe</region>
+    <platform>Toaplan 2</platform>
+    <category>Shoot&apos;em up</category>
+    <catver>Shooter / Flying Vertical</catver>
+    <mraauthor>pram0d</mraauthor>
+    <rom index="0" zip="kingdmgp.zip" type="merged" md5="none" address="0x30000000">
+        <!-- mapper for game 00 - bgaregga, 01 - sstriker, 02 - kingdmgp -->
+        <part> 02 </part>
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="ma02rom1.bin" crc="A678B149" map="01"/>
+            <part name="ma02rom0.bin" crc="F226A212" map="10"/>
+        </interleave>
+        <!-- audiocpu -->
+        <interleave output="8">
+            <part name="ma02rom2.bin" crc="DDE8A57E" map="01"/>
+        </interleave>   
+        <!--  gfx1 -->
+        <interleave output="16">
+            <part name="ma02rom3.bin" crc="0E797142" map="01"/>
+            <part name="ma02rom4.bin" crc="72A6FA53" map="10"/>
+        </interleave>
+        <!-- extra text rom -->
+        <part name="ma02rom5.eng" crc="8C28460B"/>
+        <!-- oki -->
+        <part name="ma02rom6.bin" crc="199E7CAE"/>
+    </rom>
+    <!-- Vertical game -->
+    <rom index="1">
+        <part>01</part>
+    </rom>
+    <switches default="00,00,FF" base="8">
+        <dip bits="0" name="Game Style" ids="Coin Play, Free Play"/>
+        <dip bits="1" name="Picture Indicate" ids="Normal, Reverse"/>
+        <dip bits="2" name="Function" ids="Normal, Test"/>
+        <dip bits="3" name="Demo Sound" ids="On, Off"/>
+        <dip bits="4,5" name="Coin 1" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 2 Coins/1 Credit, 2 Coins/3 Credit"/>
+        <dip bits="6,7" name="Coin 2" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 2 Coins/1 Credit, 2 Coins/3 Credit"/>
+        <dip bits="8,9" name="Difficulty" ids="Normal, Easy, Difficult, More Difficult"/>
+        <dip bits="10,11" name="Extra Player" ids="300000 Each, 200000/500000 Only, 200000 Only, No Extra Player"/>
+        <dip bits="12,13" name="Number of Player" ids="3, 5, 2, 1"/>
+        <dip bits="14" name="Game Mode" ids="Normal, Invincible"/>
+        <dip bits="15" name="Continue Play" ids="On, Off"/>
+        <dip bits="16,19" name="Region" ids="JPN,USA,EU,SEA,CHN,KOR,HK,TWN" values="0,2,4,6,8,10,12,14"/>
+    </switches>
+    
+    <buttons names="Shot,Bomb,Formation,Coin,Start" default="Y,A,B,Select,Start" count="3"/>
+</misterromdescription>

@@ -1,0 +1,58 @@
+<misterromdescription>
+    <about author="pram0d" webpage="https://pram0d.com" source="https://github.com/psomashekar" twitter="@pr4m0d"/>
+    <name>Sorcer Striker</name>
+    <setname>sstriker</setname>
+    <rbf>garegga</rbf>
+    <mameversion>0229</mameversion>
+    <year>1996</year>
+    <manufacturer>Eighting / Raizing</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>vertical</rotation>
+    <region>Europe</region>
+    <platform>Toaplan 2</platform>
+    <category>Shoot&apos;em up</category>
+    <catver>Shooter / Flying Vertical</catver>
+    <mraauthor>pram0d</mraauthor>
+    <rom index="0" zip="sstriker.zip" type="merged" md5="none" address="0x30000000">
+        <!-- mapper for game 00 - bgaregga, 01 - sstriker, 02 - kingdmgp -->
+        <part> 01 </part>
+        <!-- maincpu, byteswapped -->
+        <interleave output="16">
+            <part name="ra_ma_01_01.u65" crc="708FD51D" map="12"/>
+        </interleave>
+        <!-- audiocpu -->
+        <interleave output="8">
+            <part name="ra-ma-01_02.u66" crc="EABFA46D" map="01"/>
+        </interleave>
+        <!--  gfx1 -->
+        <interleave output="16">
+            <part name="ra-ma01-rom2.u2" crc="54E2BD95" map="01"/>
+            <part name="ra-ma01-rom3.u1" crc="21CD378F" map="10"/>
+        </interleave>
+        <!-- extra text rom -->
+        <part name="ra_ma_01_05.u81" crc="88B58841"/>
+        <!-- oki -->
+        <part name="ra-ma01-rom1.u57" crc="6EDB2AB8"/>
+    </rom>
+    <!-- Vertical game -->
+    <rom index="1">
+        <part>01</part>
+    </rom>
+    <switches default="00,00,FF" base="8">
+        <dip bits="0" name="Game Style" ids="Coin Play, Free Play"/>
+        <dip bits="1" name="Picture Indicate" ids="Normal, Reverse"/>
+        <dip bits="2" name="Function" ids="Normal, Test"/>
+        <dip bits="3" name="Demo Sound" ids="On, Off"/>
+        <dip bits="4,5" name="Coin 1" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 2 Coins/1 Credit, 2 Coins/3 Credit"/>
+        <dip bits="6,7" name="Coin 2" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 2 Coins/1 Credit, 2 Coins/3 Credit"/>
+        <dip bits="8,9" name="Difficulty" ids="Normal, Easy, Difficult, More Difficult"/>
+        <dip bits="10,11" name="Extra Player" ids="300000 Each, 200000/500000 Only, 200000 Only, No Extra Player"/>
+        <dip bits="12,13" name="Number of Player" ids="3, 5, 2, 1"/>
+        <dip bits="14" name="Game Mode" ids="Normal, Invincible"/>
+        <dip bits="15" name="Continue Play" ids="On, Off"/>
+        <dip bits="16,19" name="Region" ids="JPN,USA,EU,SEA,CHN,KOR,HK,TWN" values="0,2,4,6,8,10,12,14"/>
+    </switches>
+    
+    <buttons names="Shot,Bomb,Formation,Coin,Start" default="Y,A,B,Select,Start" count="3"/>
+</misterromdescription>
