@@ -54,8 +54,9 @@
         <dip bits="11" name="Demo Sound" ids="On, No Sound"/>
         <dip bits="12,13,14" name="Player Counts" ids="3, 4, 2, 1, 5, 6, Multiple, Invincible Mode"/>
         <dip bits="15" name="Extra Player" ids="No Extra, 2000000 Each"/>
-        <dip bits="16" name="Stage Edit" ids="Disable, Enable"/>
-        <dip bits="17" name="Continue Play" ids="Enable, Disable"/>
+        <dip bits="16,17" name="Region" ids="Japan, Europe (Tuning), USA (Fabtek), Asia"/>
+        <dip bits="19" name="Stage Edit" ids="Disable, Enable"/>
+        <dip bits="18" name="Continue Play" ids="Enable, Disable"/>
     </switches>
     
     <buttons names="Shot,Bomb,Formation,Coin,Start" default="Y,A,B,Select,Start" count="3"/>
